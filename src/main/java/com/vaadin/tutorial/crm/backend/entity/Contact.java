@@ -8,7 +8,7 @@ import javax.validation.constraints.NotNull;
 @Entity
 public class Contact  extends AbstractEntity implements Cloneable{
 
-    private enum Status {
+    public enum Status {
         ImportedLead, NotContacted, Contacted, Customer, ClosedLost
     }
 
@@ -63,6 +63,14 @@ public class Contact  extends AbstractEntity implements Cloneable{
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public Company getCompany() {
+        return company;
+    }
+
+    public void setCompany(Company company) {
+        this.company = company;
     }
 
     @Override
