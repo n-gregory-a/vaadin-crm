@@ -16,14 +16,14 @@ import com.vaadin.tutorial.crm.backend.service.ContactService;
 
 @Route("")
 @CssImport("./styles/shared-styles.css")
-public class MainView extends VerticalLayout {
+public class ListView extends VerticalLayout {
 
     private ContactForm form;
     private Grid<Contact> grid = new Grid<>(Contact.class);
     TextField filterText = new TextField();
     private ContactService contactService;
 
-    public MainView(ContactService contactService,
+    public ListView(ContactService contactService,
                     CompanyService companyService) {
         this.contactService = contactService;
         addClassName("list-view");
