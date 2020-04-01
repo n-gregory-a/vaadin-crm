@@ -42,7 +42,7 @@ public class ContactService {
         return contactRepository.count();
     }
 
-    private void delete( Contact contact) {
+    public void delete( Contact contact) {
         contactRepository.delete(contact);
     }
 
