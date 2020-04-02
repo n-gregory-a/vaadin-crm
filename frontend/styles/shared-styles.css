@@ -32,4 +32,11 @@
     font-size: 1em;
     margin: var(--lumo-space-m);
   }
+
+  /* Dashboard view */
+
+  .dashboard-view .contact-stats {
+    font-size: 4em;
+    margin: 1em 0;
+  }
 }
