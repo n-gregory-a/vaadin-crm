@@ -9,6 +9,8 @@ import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.HighlightConditions;
 import com.vaadin.flow.router.RouterLink;
+import com.vaadin.tutorial.crm.ui.views.dashboard.DashBoardView;
+import com.vaadin.tutorial.crm.ui.views.list.ListView;
 
 @CssImport("./styles/shared-styles.css")
 public class MainLayout extends AppLayout {
@@ -34,6 +36,8 @@ public class MainLayout extends AppLayout {
         RouterLink listLink = new RouterLink("List", ListView.class);
         listLink.setHighlightCondition(HighlightConditions.sameLocation());
 
-        addToDrawer(new VerticalLayout(listLink));
+        addToDrawer(new VerticalLayout(
+                listLink,
+                new RouterLink("Dashboard", DashBoardView.class)));
     }
 }
